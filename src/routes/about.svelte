@@ -77,7 +77,8 @@
   </h2>
 
   <p>
-    <a href="https://linu.us/live-chat-with-sveltekit-and-socketio">https://linu.us/live-chat-with-sveltekit-and-socketio</a>
+    <a href="https://linu.us/live-chat-with-sveltekit-and-socketio">Live-Chat with SvelteKit and SocketIO by Linus Benkner</a>
+    <a href="https://github.com/sveltejs/kit/issues/1491">GitHub issue #1491: Native support for web sockets</a>
   </p>
 </div>
 
