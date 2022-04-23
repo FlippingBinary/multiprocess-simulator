@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "npm run build:websocket && npm run build:sveltekit",
+    "build:sveltekit": "svelte-kit build",
+    "build:websocket": "esbuild src/lib/server/websocket.ts --bundle --outfile=dist/websocket.js --platform=node --format=esm",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
@@ -19,6 +21,7 @@
     "@sveltejs/kit": "next",
     "@types/cookie": "^0.4.1",
     "@types/semaphore": "^1.1.1",
+    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "eslint": "^7.32.0",

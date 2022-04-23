@@ -1,6 +1,6 @@
 import adapter from '@sveltejs/adapter-node';
+import { Server } from 'socket.io';
 import preprocess from 'svelte-preprocess';
-import { socketServer } from './websocket-server.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,7 +18,14 @@ const config = {
 
     vite: {
       plugins: [
-        socketServer()
+        {
+          name: "websocket-svelte",
+          configureServer(server) {
+            import("./dist/websocket.js").then(({ default: websocket }) => {
+              websocket(new Server(server.httpServer));
+            });
+          }
+        }
       ]
     }
 	}
