@@ -5,7 +5,7 @@
     "dev": "svelte-kit dev",
     "build": "npm run build:websocket && npm run build:sveltekit",
     "build:sveltekit": "svelte-kit build",
-    "build:websocket": "esbuild src/lib/server/websocket.ts --bundle --outfile=dist/websocket.js --platform=node --format=esm",
+    "build:websocket": "esbuild src/lib/server/websocket.ts --bundle --outfile=dist/websocket.js --platform=node --format=esm --external:uuid",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
