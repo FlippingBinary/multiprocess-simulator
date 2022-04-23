@@ -11,6 +11,7 @@
 
 <footer>
 	<p>Copyright &copy; 2022 by <a href="https://github.com/FlippingBinary">Jon Musselwhite</a> for Dr. Garuba's Advanced Operating Systems class.</p>
+  <p>Source code can be viewed on <a href="https://github.com/FlippingBinary/multiprocess-simulator">GitHub</a>.</p>
 </footer>
 
 <style>
